@@ -1,0 +1,202 @@
+###Get all songs
+GET http://localhost:3000/songs/?page=4&limit=2
+
+###Default homepage
+GET http://localhost:3000
+
+###Fetch song by id
+GET http://localhost:3000/songs/b
+
+###Fetch song by id
+GET http://localhost:3000/songs/7
+
+
+###Create a new song
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title": "you for me",
+    "artists": [1,3],
+    "releaseDate": "2022-09-29",
+    "duration": "02:34",
+    "lyrics": "These are the lyrics of lasting lover",
+    "playListId": 2
+}
+
+###Update song by id
+PUT http://localhost:3000/songs/7
+Content-Type: application/json
+
+{
+  "title": "Lasting Lover - Acoustic",
+  "artists": ["Sigala", "James Arthur"],
+  "releasedDate": "2022-10-01",
+  "duration": "02:55",
+  "lyrics": "Updated lyrics of the acoustic version of Lasting Lover"
+}
+
+
+###Delete song by id
+DELETE http://localhost:3000/songs/8
+
+###Create new playlist
+POST http://localhost:3000/playlists
+Content-Type: application/json
+
+{
+    "name": "Feel Good Now",
+    "songs": [6],
+    "user": 2
+}
+
+###Signup user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "john",
+  "lastName": "doe",
+  "email": "john@gmail.com",
+  "password": "123456"
+}
+
+###Login User
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "123456"
+}
+
+###Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwic3ViIjo5LCJpYXQiOjE3NTQ1NDcyMjEsImV4cCI6MTc1NDYzMzYyMX0.NBw2mYOptv7DgzK8QOeihDB2_8lId78R9gQ87UoskWU
+
+###Profile
+GET http://localhost:3000/profile
+Authorization: Bearer ###Get all songs
+GET http://localhost:3000/songs/?page=4&limit=2
+
+###Default homepage
+GET http://localhost:3000
+
+###Fetch song by id
+GET http://localhost:3000/songs/b
+
+###Fetch song by id
+GET http://localhost:3000/songs/7
+
+
+###Create a new song
+POST http://localhost:3000/songs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEwLCJhcnRpc3RJZCI6NywiaWF0IjoxNzU0NTc3MTI5LCJleHAiOjE3NTQ2NjM1Mjl9._ruMIoJ6z4HyvZN0cfe_dU98ZZo3PEO_b_W6pH-hdlQ
+
+{
+    "title": "love again",
+    "artists": [1],
+    "releaseDate": "2022-09-29",
+    "duration": "02:34",
+    "lyrics": "These are the lyrics of lasting lover",
+    "playListId": 2
+}
+
+###Update song by id
+PUT http://localhost:3000/songs/7
+Content-Type: application/json
+
+{
+  "title": "Lasting Lover - Acoustic",
+  "artists": ["Sigala", "James Arthur"],
+  "releasedDate": "2022-10-01",
+  "duration": "02:55",
+  "lyrics": "Updated lyrics of the acoustic version of Lasting Lover"
+}
+
+
+###Delete song by id
+DELETE http://localhost:3000/songs/8
+
+###Create new playlist
+POST http://localhost:3000/playlists
+Content-Type: application/json
+
+{
+    "name": "Feel Good Now",
+    "songs": [6],
+    "user": 2
+}
+
+###Signup user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "jam",
+  "lastName": "doe",
+  "email": "jam123@gmail.com",
+  "password": "123456",
+  "phone": "+916289838883"
+}
+
+###Login User
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "123456"
+}
+
+###Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwic3ViIjo5LCJpYXQiOjE3NTQ1NDcyMjEsImV4cCI6MTc1NDYzMzYyMX0.NBw2mYOptv7DgzK8QOeihDB2_8lId78R9gQ87UoskWU
+
+###Profile
+GET http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEwLCJhcnRpc3RJZCI6NywiaWF0IjoxNzU0NTc3MTI5LCJleHAiOjE3NTQ2NjM1Mjl9._ruMIoJ6z4HyvZN0cfe_dU98ZZo3PEO_b_W6pH-hdlQ
+
+###Signup artist
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "Martin",
+  "lastName": "Garrix",
+  "email": "martingarrix12@gmail.com",
+  "password": "123456"
+}
+
+
+###Login artist
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "martingarrix@gmail.com",
+  "password": "123456"
+}
+
+###Enable 2FA
+GET http://localhost:3000/auth/enable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwidXNlcklkIjo5LCJpYXQiOjE3NTQ1ODAyMDIsImV4cCI6MTc1NDY2NjYwMn0.TJw6xKveMPEfSuqH28RzZbbfH8AEf_IPlRtcnRHy8Qg
+
+###Validate 2FA
+POST http://localhost:3000/auth/validate-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwidXNlcklkIjo5LCJpYXQiOjE3NTQ1ODAyMDIsImV4cCI6MTc1NDY2NjYwMn0.TJw6xKveMPEfSuqH28RzZbbfH8AEf_IPlRtcnRHy8Qg
+Content-Type: application/json
+
+{
+  "token": "798078"
+}
+
+###Disable 2fa
+GET http://localhost:3000/auth/disable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwidXNlcklkIjo5LCJpYXQiOjE3NTQ1ODAyMDIsImV4cCI6MTc1NDY2NjYwMn0.TJw6xKveMPEfSuqH28RzZbbfH8AEf_IPlRtcnRHy8Qg
+
+###API KEY JAM: 851203af-7831-49b4-874f-ef6c04898835
+
+###Access profile via api key
+GET http://localhost:3000/auth/profile
+Authorization: Bearer 356218c5-23fe-43fb-885c-84e315409ca4
+
+###Test env
+GET http://localhost:3000/auth/test
