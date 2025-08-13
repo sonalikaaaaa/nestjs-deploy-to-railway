@@ -15,11 +15,11 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
   ): Promise<TypeOrmModuleOptions> => {
     return {
       type: 'postgres',
-      host: configService.get<string>('dbHost'),
-      port: configService.get<number>('dbPort'),
-      username: configService.get<string>('username'),
-      database: configService.get<string>('dbName'),
-      password: configService.get<string>('password'),
+      host: configService.get<string>('DB_HOST'),
+      port: configService.get<number>('DB_PORT'),
+      username: configService.get<string>('DB_USERNAME'),
+      database: configService.get<string>('DB_NAME'),
+      password: configService.get<string>('DB_PASSWORD'),
       entities: [User, Playlist, Artist, Song],
       //entities: ['dist/**/*.entity.js'],
      synchronize: false,
