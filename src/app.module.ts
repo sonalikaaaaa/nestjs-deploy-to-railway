@@ -82,5 +82,5 @@ const proConfig = {port: 4000};
 }
 */
 export class AppModule {
-  constructor() {}
+  //constructor() {}
 }
